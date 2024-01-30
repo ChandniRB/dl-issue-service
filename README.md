@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS public.dlno_applicationid
 
 4. `docker build -t dl-issue-service:latest .`
 
-5. `docker run -p 8000:8000 dl-issue-service:latest .`
+5. `docker run --network host -p 8000:8000 dl-issue-service:latest .`
 
 ## Run
 
