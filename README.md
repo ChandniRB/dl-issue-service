@@ -2,8 +2,8 @@
 Driving Licence application for demonstrating microservice architecture and communication between microservices.
 
 The application comprises of two services:
-1. dl-issue-service - for applying DL, generating DL and checking application status
-2. dl-test-service - for checking test slot availability, submitting test result
+1. [dl-issue-service](https://github.com/ChandniRB/dl-issue-service) - for applying DL, generating DL and checking application status
+2. [dl-test-service](https://github.com/ChandniRB/dl-test-service) - for checking test slot availability, submitting test result
 
 
 ## Prerequisites
