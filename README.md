@@ -58,12 +58,15 @@ CREATE TABLE IF NOT EXISTS public.dlno_applicationid
 ./bin/kafka-server-start.sh config/server.properties
 ```
 
+3. Set environment variables `DB_IP`, `DB_PORT`, `DB_NAME_DL`, `DB_USER`, `DB_PASSWORD`, `KAFKA_HOST`
 
-3. `mvn clean install`
+4. `mvn clean install`
 
-4. `docker build -t dl-issue-service:latest .`
+5. `docker build -t dl-issue-service:latest .`
 
-5. `docker run --network host -p 8000:8000 dl-issue-service:latest .`
+6. `docker run --network host -p 8000:8000 dl-issue-service:latest .`
+
+
 
 ## Run
 
