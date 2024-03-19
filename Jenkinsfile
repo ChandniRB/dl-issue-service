@@ -8,10 +8,14 @@ pipeline {
         DB_PASSWORD="postgres"
         KAFKA_HOST="10.1.40.8"
     }
+    tools{
+        maven 'maven'
+    }
     stages {
         stage("build") {
             steps {
-                sh 'mvn clean install -DskipTests'
+                maven('maven'){
+                    sh 'mvn clean install -DskipTests'
             }
         }
         stage("test") {
@@ -21,7 +25,8 @@ pipeline {
         }
         stage("deploy") {
             steps {
-                sh "mvn spring-boot:run"
+                maven('maven'){
+                    sh "mvn spring-boot:run"
             }
         }
     }
